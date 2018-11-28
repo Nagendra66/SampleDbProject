@@ -57,9 +57,16 @@
   <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
   <ItemGroup>
     <Folder Include="Properties" />
+    <Folder Include="dbo" />
+    <Folder Include="dbo\Stored Procedures" />
+    <Folder Include="dbo\Tables" />
+    <Folder Include="dbo\Functions" />
   </ItemGroup>
   <ItemGroup>
-    <Build Include="Table1.sql" />
-    <Build Include="Table2.sql" />
+    <Build Include="dbo\Tables\Table1.sql" />
+    <Build Include="dbo\Tables\Table2.sql" />
+    <Build Include="dbo\Tables\gsAdSize.sql" />
+    <Build Include="dbo\Stored Procedures\_spConvertCustomFields.sql" />
+    <Build Include="dbo\Functions\DateBetween.sql" />
   </ItemGroup>
 </Project>
